@@ -21,7 +21,7 @@ class FPGAConvNetWrapper(Node):
 
         # add the kernel size if it's a convolution layer
         if issubclass(type(layer), ConvolutionLayerBase):
-            self.kernel_size = layer.kernel_size[0]
+            self.kernel_size = max(layer.kernel_size)
 
         # set the matching folding constraint
         self.constraints = { "matching_intra_folding" : not issubclass(type(layer),

@@ -78,11 +78,11 @@ class Node:
 
     @property
     def valid_channel_in_folding(self) -> List[int]:
-        return sorted(get_factors(self.channels_in))
+        return [1]#sorted(get_factors(self.channels_in))
 
     @property
     def valid_channel_out_folding(self):
-        return sorted(get_factors(self.channels_out))
+        return [1]#sorted(get_factors(self.channels_out))
 
     @property
     def valid_kernel_folding(self):

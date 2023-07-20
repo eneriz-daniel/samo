@@ -7,3 +7,5 @@ docs/samo/
 **/__pycache__/
 
 samo.log
+
+*.egg-info
